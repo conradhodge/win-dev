@@ -1,0 +1,28 @@
+---
+- name: Add Golang PPA repository
+  become: yes
+  apt_repository:
+    repo: ppa:longsleep/golang-backports
+
+- name: Update apt
+  become: yes
+  apt:
+    update_cache: yes
+
+- name: Install Golang
+  become: yes
+  apt:
+    name: golang-go
+    state: latest
+
+- name: Add GOPATH in bashrc
+  lineinfile:
+    path: "$HOME/.bashrc"
+    line: 'export GOPATH=$HOME/go'
+    state: present
+
+- name: Update PATH with GOPATH in bashrc
+  lineinfile:
+    path: "$HOME/.bashrc"
+    line: 'export PATH="${GOPATH}/bin:${PATH}"'
+    state: present

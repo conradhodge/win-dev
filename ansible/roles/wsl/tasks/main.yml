@@ -1,0 +1,5 @@
+- import_tasks: apt.yml
+- import_tasks: node.yml
+- import_tasks: go.yml
+- import_tasks: aws.yml
+- import_tasks: cows.yml

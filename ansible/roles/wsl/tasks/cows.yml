@@ -1,0 +1,6 @@
+---
+- name: Randomise those cows!
+  lineinfile:
+    path: "$HOME/.bashrc"
+    line: 'export ANSIBLE_COW_SELECTION=random'
+    state: present

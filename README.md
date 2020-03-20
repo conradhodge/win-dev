@@ -9,7 +9,7 @@ If you using [Visual Studio Code](https://code.visualstudio.com/) on your host W
 You will need to install some pre-requisites prior to running the provisioning scripts. Open the Ubuntu 18.04 WSL console and type the following command:
 
 ```shell
-make setup
+./setup.sh
 ```
 
 Then you can run the provision command in the WSL console:

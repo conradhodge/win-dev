@@ -29,3 +29,5 @@ This will:
   - [Node.js 10.x](https://nodejs.org/)
   - [Go](https://golang.org/)
   - [AWS CLI](https://aws.amazon.com/cli/) (NOTE: You will need to [configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) the AWS CLI in the WSL console)
+
+Use [this guide](https://blog.soltysiak.it/en/2017/01/set-visual-studio-code-as-default-git-editor-and-diff-tool/) to configure `git` with Visual Studio Code. [This guide](https://zitseng.com/archives/19588) describes how to install and configure the Git Credential Manager for Windows.

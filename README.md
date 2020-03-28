@@ -1,20 +1,22 @@
-# Windows Subsystem for Linux
+# Windows Development Environment
 
-This repo is for provisioning Linux under the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about). It assumes you are installing the Ubuntu 18.04 distribution, which as of writing, is the latest [Ubuntu LTS](https://wiki.ubuntu.com/Releases).
+This describes how to setup a Windows machine for development. This repo contains some [Ansible](https://www.ansible.com/) scripts to provision Linux under the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about).
+
+## Development tools
+
+Install [Visual Studio Code](https://code.visualstudio.com/). Then you need to [install the WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10). The provision scripts have been written for the Ubuntu distribution of Linux. Follow [this guide](https://code.visualstudio.com/docs/remote/wsl) to setup Visual Studio Code to use the WSL.
+
+The [Windows terminal](https://github.com/microsoft/terminal) is a terminal application for users of command-line tools on Windows.
 
 ## Setup
 
-First you need to [install the WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10). Pick the [Ubuntu 18.04](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q) distibution.
-
-Follow [this guide](https://code.visualstudio.com/docs/remote/wsl) to setup [Visual Studio Code](https://code.visualstudio.com/) to use the WSL.
-
-You will need to install some pre-requisites prior to running the provisioning scripts. Open the Ubuntu 18.04 WSL console and type the following command:
+You will need to install some pre-requisites prior to running the provisioning scripts. Open the Linux console and type the following command:
 
 ```shell
 ./setup.sh
 ```
 
-Then you can run the provision command in the WSL console:
+Then you can run the provision command:
 
 ```shell
 make provision
@@ -32,13 +34,11 @@ This will:
   - [Go](https://golang.org/)
   - [AWS CLI](https://aws.amazon.com/cli/)
 
-## Manual steps
-
-Git
+Git configuration:
 
 - Use this [guide](https://blog.soltysiak.it/en/2017/01/set-visual-studio-code-as-default-git-editor-and-diff-tool/) to configure `git` with Visual Studio Code
-- This [guide](https://zitseng.com/archives/19588) describes how to install and configure the Git Credential Manager for Windows
+- This [guide](https://zitseng.com/archives/19588) describes how to install and configure the [Git Credential Manager for Windows](https://github.com/microsoft/Git-Credential-Manager-for-Windows)
 
-AWS
+AWS configuration
 
 - Configure the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) in the WSL console

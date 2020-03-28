@@ -30,7 +30,7 @@ This will:
   - zip
   - [jq](https://stedolan.github.io/jq/)
   - [cowsay](https://en.wikipedia.org/wiki/Cowsay) (very important)
-  - [Node.js](https://nodejs.org/https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions)
+  - [Node.js](https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions)
   - [Go](https://golang.org/)
   - [AWS CLI](https://aws.amazon.com/cli/)
 

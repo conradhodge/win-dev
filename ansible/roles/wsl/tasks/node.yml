@@ -1,9 +1,9 @@
 ---
-- name: Add a source file for the official Node.js 10.x repo
+- name: Add a source file for the official Node.js {{ node_version }}.x repo
   shell:
-    curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+    curl -sL https://deb.nodesource.com/setup_{{ node_version }}.x | sudo -E bash -
 
-- name: Install Node.js 10.x
+- name: Install Node.js {{ node_version }}.x
   become: yes
   apt:
     name: nodejs

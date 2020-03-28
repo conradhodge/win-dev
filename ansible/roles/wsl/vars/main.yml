@@ -4,3 +4,5 @@ apt_packages:
   - jq
   - cowsay
   - awscli
+
+node_version: 12

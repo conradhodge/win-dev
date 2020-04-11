@@ -1,5 +1,7 @@
 # Windows Development Environment
 
+![build](https://github.com/conradhodge/win-dev/workflows/CI/badge.svg)
+
 This describes how to setup a Windows machine for development. This repo contains some [Ansible](https://www.ansible.com/) scripts to provision Linux under the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about).
 
 ## Development tools

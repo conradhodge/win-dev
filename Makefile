@@ -8,6 +8,14 @@ explain:
 	### Targets
 	@cat Makefile* | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
+.PHONY: setup
+setup: ## Set up githooks
+	cp scripts/githooks/* .git/hooks/
+
+.PHONY: vet
+vet: ## Vet the WSL playbook
+	ansible-playbook ansible/wsl.yml --syntax-check
+
 .PHONY: provision
 provision: setup-git-config ## Provision your Linux machine via the Windows Subsystem for Linux
 	ansible-playbook -i ansible/hosts ansible/wsl.yml --verbose --ask-become-pass

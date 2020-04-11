@@ -2,7 +2,7 @@
 
 ![build](https://github.com/conradhodge/win-dev/workflows/CI/badge.svg)
 
-This describes how to setup a Windows machine for development. This repo contains some [Ansible](https://www.ansible.com/) scripts to provision Linux under the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about).
+This describes how to setup a Windows development environment using the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about) and [Ubuntu](https://ubuntu.com/). This repo contains [Ansible](https://www.ansible.com/) scripts to provision Ubuntu in the WSL.
 
 ## Development tools
 
@@ -12,7 +12,7 @@ The [Windows terminal](https://github.com/microsoft/terminal) is a terminal appl
 
 ## Setup
 
-You will need to install some pre-requisites prior to running the provisioning scripts. Open the Linux console and type the following command:
+You will need to install some pre-requisites prior to running the provisioning scripts. Open the Ubuntu console and type the following command:
 
 ```shell
 ./setup.sh

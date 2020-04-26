@@ -1,4 +1,10 @@
 ---
+- name: Add PPA repositories
+  become: yes
+  apt_repository:
+    repo: "{{ item }}"
+  with_items: "{{ apt_repositories }}"
+
 - name: Update and upgrade apt packages
   become: yes
   apt:

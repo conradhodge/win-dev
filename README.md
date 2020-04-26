@@ -31,6 +31,7 @@ This will:
   - curl
   - zip
   - [jq](https://stedolan.github.io/jq/)
+  - [yq](https://mikefarah.gitbook.io/yq/)
   - [cowsay](https://en.wikipedia.org/wiki/Cowsay) (very important)
   - [Node.js](https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions)
   - [Go](https://golang.org/)

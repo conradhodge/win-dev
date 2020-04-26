@@ -1,7 +1,11 @@
+apt_repositories:
+  - ppa:rmescandon/yq
+
 apt_packages:
   - curl
   - zip
   - jq
+  - yq
   - cowsay
   - awscli
 

@@ -1,4 +1,4 @@
-- name: A playbook to setup Ubuntu 18.04 via the Windows Subsystem for Linux
+- name: A playbook to setup Ubuntu via the Windows Subsystem for Linux
   hosts: wsl
   connection: local
   roles:

@@ -32,10 +32,11 @@ This will:
   - zip
   - [jq](https://stedolan.github.io/jq/)
   - [yq](https://mikefarah.gitbook.io/yq/)
-  - [cowsay](https://en.wikipedia.org/wiki/Cowsay) (very important)
   - [Node.js](https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions)
   - [Go](https://golang.org/)
+  - [GitHub CLI](https://cli.github.com/)
   - [AWS CLI](https://aws.amazon.com/cli/)
+  - [cowsay](https://en.wikipedia.org/wiki/Cowsay) (very important)
 
 Git configuration:
 

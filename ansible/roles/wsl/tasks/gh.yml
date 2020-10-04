@@ -1,0 +1,16 @@
+---
+- name: Add GitHub CLI apt key
+  become: yes
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: C99B11DEB97541F0
+
+- name: Add GitHub CLI apt repository
+  become: yes
+  command: apt-add-repository https://cli.github.com/packages
+
+- name: Install GitHub CLI package
+  become: yes
+  apt:
+    name: gh
+    state: latest

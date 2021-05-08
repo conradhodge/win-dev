@@ -2,7 +2,9 @@
 
 ![build](https://github.com/conradhodge/win-dev/workflows/CI/badge.svg)
 
-This describes how to setup a Windows development environment using the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about) and [Ubuntu](https://ubuntu.com/). This repo contains [Ansible](https://www.ansible.com/) scripts to provision Ubuntu in the WSL.
+This describes how to setup a Windows development environment using the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about) and [Ubuntu](https://ubuntu.com/).
+
+This repo contains [Ansible](https://www.ansible.com/) scripts to provision Ubuntu in the WSL.
 
 ## Development tools
 
@@ -16,17 +18,22 @@ Follow these tutorials to configure the WSL.
 
 - [Git](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-git)
 - [VSCode](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode)
-- [This guide](https://blog.soltysiak.it/en/2017/01/set-visual-studio-code-as-default-git-editor-and-diff-tool/) to configure `git` with Visual Studio Code
+
+Follow these guides to configure Git.
+
+- [This](https://blog.soltysiak.it/en/2017/01/set-visual-studio-code-as-default-git-editor-and-diff-tool/) to configure `git` with Visual Studio Code
+- [This](https://spin.atomicobject.com/2020/05/05/git-configurations-default/) has some useful `git` config options
 
 ## Setup
 
-You will need to install some pre-requisites prior to running the provisioning scripts. Open the Ubuntu console and type the following command:
+You will need to install some pre-requisites prior to running the provisioning scripts.
+
 
 ```shell
 ./setup.sh
 ```
 
-Then you can run the provision command:
+Then you can run the provision command.
 
 ```shell
 make provision

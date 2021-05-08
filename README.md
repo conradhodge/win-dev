@@ -6,9 +6,17 @@ This describes how to setup a Windows development environment using the [Windows
 
 ## Development tools
 
-Install [Visual Studio Code](https://code.visualstudio.com/). Then you need to [install the WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10). The provision scripts have been written for the Ubuntu distribution of Linux. Follow [this guide](https://code.visualstudio.com/docs/remote/wsl) to setup Visual Studio Code to use the WSL.
+Install the following development tools manually.
 
-The [Windows terminal](https://github.com/microsoft/terminal) is a terminal application for users of command-line tools on Windows.
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Windows terminal](https://github.com/microsoft/terminal)
+- [WSL](https://docs.microsoft.com/en-us/windows/wsl/)
+
+Follow these tutorials to configure the WSL.
+
+- [Git](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-git)
+- [VSCode](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode)
+- [This guide](https://blog.soltysiak.it/en/2017/01/set-visual-studio-code-as-default-git-editor-and-diff-tool/) to configure `git` with Visual Studio Code
 
 ## Setup
 
@@ -36,13 +44,9 @@ This will:
   - [Go](https://golang.org/)
   - [GitHub CLI](https://cli.github.com/)
   - [AWS CLI](https://aws.amazon.com/cli/)
+  - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/)
   - [cowsay](https://en.wikipedia.org/wiki/Cowsay) (very important)
 
-Git configuration:
+Follow these tutorials to configure the CLI tools.
 
-- Use this [guide](https://blog.soltysiak.it/en/2017/01/set-visual-studio-code-as-default-git-editor-and-diff-tool/) to configure `git` with Visual Studio Code
-- This [guide](https://zitseng.com/archives/19588) describes how to install and configure the [Git Credential Manager for Windows](https://github.com/microsoft/Git-Credential-Manager-for-Windows)
-
-AWS configuration
-
-- Configure the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) in the WSL console
+- [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)

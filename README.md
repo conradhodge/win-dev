@@ -49,6 +49,7 @@ This will:
   - [yq](https://mikefarah.gitbook.io/yq/)
   - [Node.js](https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions)
   - [Go](https://golang.org/)
+    - [golangci-lint](https://golangci-lint.run/)
   - [GitHub CLI](https://cli.github.com/)
   - [AWS CLI](https://aws.amazon.com/cli/)
   - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/)

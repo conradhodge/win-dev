@@ -11,5 +11,5 @@ apt_packages:
   - golang-go
   - awscli
 
-node_version: 14
-golangci_version: 1.39.0
+node_version: 16
+golangci_version: 1.40.1

@@ -10,7 +10,3 @@
     path: "$HOME/.bashrc"
     line: 'export PATH="${GOPATH}/bin:${PATH}"'
     state: present
-
-- name: Install golangci-lint
-  shell:
-    curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin latest

@@ -1,0 +1,8 @@
+---
+- name: Install npm packages # noqa 403
+  become: yes
+  npm:
+    name: "{{ item }}"
+    global: yes
+    state: latest
+  with_items: "{{ node_packages }}"

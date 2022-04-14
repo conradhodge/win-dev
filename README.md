@@ -49,6 +49,7 @@ This will:
   - [yq](https://mikefarah.gitbook.io/yq/)
   - [Node.js](https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions)
   - [Go](https://golang.org/)
+  - [pip and venv](https://docs.microsoft.com/en-us/windows/python/web-frameworks#install-python-pip-and-venv)
   - [GitHub CLI](https://cli.github.com/)
   - [AWS CDK CLI](https://github.com/aws/aws-cdk)
   - [AWS CLI](https://aws.amazon.com/cli/)

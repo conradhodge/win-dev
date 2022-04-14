@@ -10,6 +10,8 @@ apt_packages:
   - cowsay
   - golang-go
   - awscli
+  - python3-pip
+  - python3-venv
 
 node_packages:
   - aws-cdk

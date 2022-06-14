@@ -4,5 +4,6 @@
 - import_tasks: gh.yml
 - import_tasks: go.yml
 - import_tasks: npm.yml
+- import_tasks: aws.yml
 - import_tasks: azure.yml
 - import_tasks: cows.yml

@@ -9,7 +9,6 @@ apt_packages:
   - yq
   - cowsay
   - golang-go
-  - awscli
   - python3-pip
   - python3-venv
 

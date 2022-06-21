@@ -17,6 +17,7 @@ Install the following development tools manually.
 Follow these tutorials to configure the WSL.
 
 - [Git](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-git)
+  - See [this bug](https://github.com/MicrosoftDocs/WSL/issues/1520) regarding the git credential manager
 - [VSCode](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode)
 
 Follow these guides to configure Git.

@@ -3,7 +3,7 @@
   become: yes
   apt_key:
     keyserver: keyserver.ubuntu.com
-    id: C99B11DEB97541F0
+    id: 23F3D4EA75716059
 
 - name: Add GitHub CLI apt repository
   become: yes

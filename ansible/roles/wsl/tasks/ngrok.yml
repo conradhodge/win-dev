@@ -1,24 +1,24 @@
 ---
 - name: Add an apt signing key for ngrok
-  become: true
+  become: yes
   apt_key:
     url: https://ngrok-agent.s3.amazonaws.com/ngrok.asc
     state: present
 
 - name: Add apt repository for ngrok
-  become: true
+  become: yes
   apt_repository:
     repo: deb https://ngrok-agent.s3.amazonaws.com buster main
     filename: ngrok.list
     state: present
 
 - name: Update apt packages
-  become: true
+  become: yes
   apt:
     update_cache: yes
 
 - name: Install ngrok
-  become: true
+  become: yes
   apt:
     name: ngrok
     state: latest

@@ -1,4 +1,3 @@
 ---
 - name: Install the Azure CLI
-  shell:
-    curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+  shell: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash

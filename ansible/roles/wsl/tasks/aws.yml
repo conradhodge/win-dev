@@ -6,6 +6,13 @@
     remote_src: yes
 
 - name: Install AWS CLI
-  become: true
-  shell:
-    /tmp/aws/install
+  become: yes
+  command: /tmp/aws/install
+  args:
+    creates: /usr/local/aws-cli/v2/current
+
+- name: Update AWS CLI
+  become: yes
+  command: /tmp/aws/install --update
+  args:
+    removes: /usr/local/aws-cli/v2/current

@@ -55,6 +55,7 @@ This will:
   - [GitHub CLI](https://cli.github.com/)
   - [AWS CDK CLI](https://github.com/aws/aws-cdk)
   - [AWS CLI](https://aws.amazon.com/cli/)
+  - [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html)
   - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/)
   - [cowsay](https://en.wikipedia.org/wiki/Cowsay) (very important)
 

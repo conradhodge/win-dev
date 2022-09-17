@@ -12,6 +12,7 @@ explain:
 setup: ## Install pre-requisites to provision Ubuntu via the Windows Subsystem for Linux
 	cp scripts/githooks/* .git/hooks/
 	./scripts/setup.sh
+	ansible-galaxy collection install community.general
 
 .PHONY: vet
 vet: ## Vet the Windows Subsystem for Linux Anisible playbook

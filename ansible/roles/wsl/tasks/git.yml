@@ -1,0 +1,24 @@
+---
+- name: Configure Git to clean objects in your local repository
+  git_config:
+    name: fetch.prune
+    scope: global
+    value: "true"
+
+- name: Configure Git to use VSCode as editor
+  git_config:
+    name: core.editor
+    scope: global
+    value: code --wait
+
+- name: Configure Git to use Windows Credentials Manager
+  git_config:
+    name: credential.helper
+    scope: global
+    value: /mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe
+
+- name: Configure Git to use with Azure DevOps
+  git_config:
+    name: credential.https://dev.azure.com.useHttpPath
+    scope: global
+    value: "true"

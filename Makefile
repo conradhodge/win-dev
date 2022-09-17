@@ -3,21 +3,22 @@ HOME ?= `$HOME`
 explain:
 	### Welcome
 	#
-	# Makefile for a development machine
+	# Makefile for a Windows development machine using Ubuntu via the Windows Subsystem for Linux
 	#
 	### Targets
-	@cat Makefile* | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+	@cat Makefile* | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
 .PHONY: setup
-setup: ## Set up githooks
+setup: ## Install pre-requisites to provision Ubuntu via the Windows Subsystem for Linux
 	cp scripts/githooks/* .git/hooks/
+	./scripts/setup.sh
 
 .PHONY: vet
-vet: ## Vet the WSL playbook
+vet: ## Vet the Windows Subsystem for Linux Anisible playbook
 	ansible-playbook ansible/wsl.yml --syntax-check
 
 .PHONY: provision
-provision: setup-git-config ## Provision your Linux machine via the Windows Subsystem for Linux
+provision: setup-git-config ## Provision Ubuntu via the Windows Subsystem for Linux
 	ansible-playbook -i ansible/hosts ansible/wsl.yml --verbose --ask-become-pass
 
 .PHONY: setup-git-config

@@ -12,17 +12,8 @@ Install the following development tools manually.
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Windows terminal](https://github.com/microsoft/terminal)
-- [WSL](https://docs.microsoft.com/en-us/windows/wsl/)
-
-Follow these tutorials to configure the WSL.
-
-- [Git](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-git)
-- [VSCode](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode)
-
-Follow these guides to configure Git.
-
-- [This](https://blog.soltysiak.it/en/2017/01/set-visual-studio-code-as-default-git-editor-and-diff-tool/) to configure `git` with Visual Studio Code
-- [This](https://spin.atomicobject.com/2020/05/05/git-configurations-default/) has some useful `git` config options
+- [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
+- [Git for Windows](https://gitforwindows.org/)
 
 A list of recommended Visual Studio Code extensions will be offered when this repository is open in Visual Studio Code.
 

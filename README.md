@@ -31,7 +31,7 @@ A list of recommended Visual Studio Code extensions will be offered when this re
 You will need to install some pre-requisites prior to running the provisioning scripts.
 
 ```shell
-./setup.sh
+make setup
 ```
 
 Then you can run the provision command.
@@ -62,3 +62,5 @@ This will:
 Follow these tutorials to configure the CLI tools.
 
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
+
+The provision command can then be used to update all the above tools.

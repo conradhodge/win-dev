@@ -17,7 +17,7 @@ vet: ## Vet the Windows Subsystem for Linux Anisible playbook
 	ansible-playbook ansible/wsl.yml --syntax-check
 
 .PHONY: provision
-provision: setup-git-config ## Provision Ubuntu via the Windows Subsystem for Linux
+provision: setup-git-config ## Provision/update Ubuntu via the Windows Subsystem for Linux
 	ansible-playbook -i ansible/hosts ansible/wsl.yml --verbose --ask-become-pass
 
 .PHONY: setup-git-config

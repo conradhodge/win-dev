@@ -11,6 +11,7 @@ apt_packages:
   - golang-go
   - python3-pip
   - python3-venv
+  - zsh
 
 node_packages:
   - aws-cdk

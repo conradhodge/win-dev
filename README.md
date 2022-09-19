@@ -4,24 +4,26 @@
 
 This describes how to setup a Windows development environment using the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about) and [Ubuntu](https://ubuntu.com/).
 
-This repo contains [Ansible](https://www.ansible.com/) scripts to provision Ubuntu in the WSL.
-
-## Development tools
-
-Install the following development tools manually.
-
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Windows terminal](https://github.com/microsoft/terminal)
-- [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
-- [Git for Windows](https://gitforwindows.org/)
-
-A list of recommended Visual Studio Code extensions will be offered when this repository is open in Visual Studio Code.
+This repo uses the [winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/) CLI to install applications in Windows and [Ansible](https://www.ansible.com/) scripts to provision Ubuntu in the WSL.
 
 ## Setup
 
-Clone this repo in the WSL.
+Clone this repo using the Windows Command Prompt and run the following command.
 
-You will need to install some pre-requisites prior to running the provisioning scripts.
+```shell
+./setup.bat
+```
+
+This will install the following:
+
+- [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) with the [Ubuntu](https://ubuntu.com/) distribution
+- [Git for Windows](https://gitforwindows.org/)
+- [Windows Terminal](https://github.com/microsoft/terminal)
+- [Visual Studio Code](https://code.visualstudio.com/)
+
+A list of recommended [Visual Studio Code extensions](https://code.visualstudio.com/docs/editor/extension-marketplace) will be offered when this repository is open in Visual Studio Code.
+
+Clone this repo in the WSL and run the following command to install the pre-requisites.
 
 ```shell
 ./setup.sh

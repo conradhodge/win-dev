@@ -9,10 +9,8 @@ explain:
 	@cat Makefile* | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
 .PHONY: setup
-setup: ## Install pre-requisites to provision Ubuntu via the Windows Subsystem for Linux
+setup: ## Setup git hooks
 	cp scripts/githooks/* .git/hooks/
-	./scripts/setup.sh
-	ansible-galaxy collection install community.general
 
 .PHONY: vet
 vet: ## Vet the Windows Subsystem for Linux Anisible playbook

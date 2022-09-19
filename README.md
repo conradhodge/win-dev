@@ -19,10 +19,12 @@ A list of recommended Visual Studio Code extensions will be offered when this re
 
 ## Setup
 
+Clone this repo in the WSL.
+
 You will need to install some pre-requisites prior to running the provisioning scripts.
 
 ```shell
-make setup
+./setup.sh
 ```
 
 Then you can run the provision command.

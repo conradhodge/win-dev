@@ -35,6 +35,7 @@ make provision
 
 This will:
 
+- Setup [zsh](https://www.zsh.org/) and [oh-my-zsh](https://ohmyz.sh/) for terminal
 - Perform an `apt` update and upgrade
 - Install the following `apt` packages:
   - curl
@@ -56,4 +57,10 @@ Follow these tutorials to configure the CLI tools.
 
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 
-The provision command can then be used to update all the above tools.
+## Update
+
+The provision command can also be used to update all the above packages.
+
+```shell
+make provision
+```

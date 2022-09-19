@@ -1,6 +1,12 @@
 ---
-- name: Randomise those cows!
+- name: Randomise those cow in bashrc!
   lineinfile:
     path: "$HOME/.bashrc"
+    line: 'export ANSIBLE_COW_SELECTION=random'
+    state: present
+
+- name: Randomise those cows in zshrc!
+  lineinfile:
+    path: "$HOME/.zshrc"
     line: 'export ANSIBLE_COW_SELECTION=random'
     state: present

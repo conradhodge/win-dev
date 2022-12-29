@@ -15,7 +15,7 @@
   git_config:
     name: credential.helper
     scope: global
-    value: /mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe
+    value: /mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe
 
 - name: Configure Git to use with Azure DevOps
   git_config:

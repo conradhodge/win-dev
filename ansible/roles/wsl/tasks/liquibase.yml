@@ -1,0 +1,21 @@
+---
+- name: Create directory for Liquibase installation
+  become: yes
+  ansible.builtin.file:
+    path: /usr/local/liquibase/{{ liquibase_version }}
+    state: directory
+
+- name: Download the Liquibase package
+  become: yes
+  ansible.builtin.unarchive:
+    src: https://github.com/liquibase/liquibase/releases/download/v{{ liquibase_version }}/liquibase-{{ liquibase_version }}.zip
+    dest: /usr/local/liquibase/{{ liquibase_version }}
+    remote_src: yes
+    creates: /usr/local/liquibase/{{ liquibase_version }}/liquibase
+
+- name: Create a symbolic link to Liquibase command
+  become: yes
+  ansible.builtin.file:
+    src: /usr/local/liquibase/{{ liquibase_version }}/liquibase
+    dest: /usr/local/bin/liquibase
+    state: link

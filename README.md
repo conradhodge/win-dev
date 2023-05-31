@@ -46,11 +46,13 @@ This will:
   - [Go](https://golang.org/)
   - [pip and venv](https://docs.microsoft.com/en-us/windows/python/web-frameworks#install-python-pip-and-venv)
   - [ngrok](https://ngrok.com/)
+  - [Java Runtime Environment from OpenJDK](https://ubuntu.com/tutorials/install-jre#1-overview)
   - [GitHub CLI](https://cli.github.com/)
   - [AWS CDK CLI](https://github.com/aws/aws-cdk)
   - [AWS CLI](https://aws.amazon.com/cli/)
   - [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html)
   - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/)
+  - [Liquibase CLI](https://www.liquibase.org/)
   - [cowsay](https://en.wikipedia.org/wiki/Cowsay) (very important)
 
 Follow these tutorials to configure the CLI tools.

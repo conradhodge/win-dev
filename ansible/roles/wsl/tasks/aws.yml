@@ -17,6 +17,11 @@
   args:
     removes: /usr/local/aws-cli/v2/current
 
+- name: Install Session Manager plugin for the AWS CLI
+  become: yes
+  apt:
+    deb: https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb
+
 - name: Create directory for AWS SAM CLI installer
   ansible.builtin.file:
     path: /tmp/sam-installation

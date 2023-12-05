@@ -1,0 +1,6 @@
+---
+- name: Run tmpreaper in zshrc to clean the tmp directory
+  lineinfile:
+    path: "$HOME/.zshrc"
+    line: 'tmpreaper 7d /tmp'
+    state: present

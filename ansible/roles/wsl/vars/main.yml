@@ -13,6 +13,8 @@ apt_packages:
   - python3-venv
   - zsh
   - default-jre
+  - tmpreaper
+  - qdirstat
 
 node_packages:
   - aws-cdk

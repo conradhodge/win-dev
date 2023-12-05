@@ -37,7 +37,7 @@ This will:
 
 - Setup [zsh](https://www.zsh.org/) and [oh-my-zsh](https://ohmyz.sh/) for terminal
 - Perform an `apt` update and upgrade
-- Install the following `apt` packages:
+- Install the following:
   - curl
   - zip
   - [jq](https://stedolan.github.io/jq/)
@@ -46,7 +46,9 @@ This will:
   - [Go](https://golang.org/)
   - [pip and venv](https://docs.microsoft.com/en-us/windows/python/web-frameworks#install-python-pip-and-venv)
   - [ngrok](https://ngrok.com/)
+  - [tmpreaper](https://manpages.ubuntu.com/manpages/focal/man8/tmpreaper.8.html)
   - [Java Runtime Environment from OpenJDK](https://ubuntu.com/tutorials/install-jre#1-overview)
+  - [QDirStat](https://github.com/shundhammer/qdirstat)
   - [GitHub CLI](https://cli.github.com/)
   - [AWS CDK CLI](https://github.com/aws/aws-cdk)
   - [AWS CLI](https://aws.amazon.com/cli/)

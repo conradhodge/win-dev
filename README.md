@@ -44,6 +44,7 @@ This will:
   - [yq](https://mikefarah.gitbook.io/yq/)
   - [Node.js](https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions)
   - [Go](https://golang.org/)
+  - [Rush](https://rushjs.io/pages/intro/welcome/)
   - [pip and venv](https://docs.microsoft.com/en-us/windows/python/web-frameworks#install-python-pip-and-venv)
   - [ngrok](https://ngrok.com/)
   - [tmpreaper](https://manpages.ubuntu.com/manpages/focal/man8/tmpreaper.8.html)

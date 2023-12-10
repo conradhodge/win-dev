@@ -16,6 +16,7 @@ snap_packages:
   - yq
 
 node_packages:
+  - "@microsoft/rush"
   - aws-cdk
 
 node_version: 20

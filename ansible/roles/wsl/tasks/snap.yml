@@ -1,0 +1,4 @@
+- name: Install snap packages
+  become: yes
+  community.general.snap:
+    name: "{{ snap_packages }}"

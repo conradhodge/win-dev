@@ -1,6 +1,12 @@
 ---
+- name: Run tmpreaper in bashrc to clean the tmp directory
+  ansible.builtin.lineinfile:
+    path: "$HOME/.bashrc"
+    line: 'tmpreaper 7d /tmp'
+    state: present
+
 - name: Run tmpreaper in zshrc to clean the tmp directory
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: "$HOME/.zshrc"
     line: 'tmpreaper 7d /tmp'
     state: present

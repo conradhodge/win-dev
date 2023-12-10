@@ -1,9 +1,17 @@
 ---
-- name: Add a source file for the official Node.js {{ node_version }}.x repo
-  shell: curl -sL https://deb.nodesource.com/setup_{{ node_version }}.x | sudo -E bash -
+- name: Download nodesource setup script
+  ansible.builtin.get_url:
+    url: https://deb.nodesource.com/nsolid_setup_deb.sh
+    dest: /tmp/nsolid_setup_deb.sh
+    mode: '0500'
 
-- name: Install Node.js {{ node_version }}.x
+- name: Run nodesource setup script
   become: yes
-  apt:
+  ansible.builtin.shell: /tmp/nsolid_setup_deb.sh {{ node_version }}
+  args:
+    creates: /usr/share/keyrings/nodesource.gpg
+
+- name: Install Node.js {{ node_version }}
+  become: yes
+  ansible.builtin.apt:
     name: nodejs
-    state: latest

@@ -1,14 +1,9 @@
-apt_repositories:
-  - ppa:rmescandon/yq
-  - ppa:longsleep/golang-backports
-
 apt_packages:
   - curl
   - zip
   - jq
-  - yq
   - cowsay
-  - golang-go
+  - python3-debian
   - python3-pip
   - python3-venv
   - zsh
@@ -16,9 +11,13 @@ apt_packages:
   - tmpreaper
   - qdirstat
 
+snap_packages:
+  - ngrok
+  - yq
+
 node_packages:
   - aws-cdk
 
-node_version: 18
+node_version: 20
 
 liquibase_version: 4.25.0

@@ -7,19 +7,19 @@
 
 - name: Install AWS CLI
   become: yes
-  command: /tmp/aws/install
+  ansible.builtin.command: /tmp/aws/install
   args:
     creates: /usr/local/aws-cli/v2/current
 
 - name: Update AWS CLI
   become: yes
-  command: /tmp/aws/install --update
+  ansible.builtin.command: /tmp/aws/install --update
   args:
     removes: /usr/local/aws-cli/v2/current
 
 - name: Install Session Manager plugin for the AWS CLI
   become: yes
-  apt:
+  ansible.builtin.apt:
     deb: https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb
 
 - name: Create directory for AWS SAM CLI installer
@@ -36,12 +36,12 @@
 
 - name: Install AWS SAM CLI
   become: yes
-  command: /tmp/sam-installation/install
+  ansible.builtin.command: /tmp/sam-installation/install
   args:
     creates: /usr/local/aws-sam-cli/current
 
 - name: Update AWS SAM CLI
   become: yes
-  command: /tmp/sam-installation/install --update
+  ansible.builtin.command: /tmp/sam-installation/install --update
   args:
     removes: /usr/local/aws-sam-cli/current

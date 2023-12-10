@@ -1,6 +1,6 @@
 ---
 - name: Add git branch in to bash prompt
-  blockinfile:
+  ansible.builtin.blockinfile:
     dest: $HOME/.bashrc
     block: |
       parse_git_branch() {

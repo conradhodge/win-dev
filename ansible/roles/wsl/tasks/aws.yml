@@ -1,4 +1,5 @@
 ---
+# https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 - name: Download the AWS CLI installer
   ansible.builtin.unarchive:
     src: https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip

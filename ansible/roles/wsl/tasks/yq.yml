@@ -1,0 +1,8 @@
+---
+# https://github.com/mikefarah/yq/#install
+- name: Download yq
+  become: yes
+  ansible.builtin.get_url:
+    url: https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+    dest: /usr/bin/yq
+    mode: '0755'

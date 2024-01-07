@@ -11,14 +11,8 @@ apt_packages:
   - tmpreaper
   - qdirstat
 
-snap_packages:
-  - ngrok
-  - yq
-
 node_packages:
   - "@microsoft/rush"
   - aws-cdk
-
-node_version: 20
 
 liquibase_version: 4.25.0

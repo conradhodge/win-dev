@@ -1,6 +1,17 @@
 ---
-- name: Install Go
+# https://go.dev/wiki/Ubuntu
+- name: Add PPA repository for golang
   become: yes
-  community.general.snap:
-    name: go
-    classic: true
+  apt_repository:
+    repo: ppa:longsleep/golang-backports
+
+- name: Update apt packages
+  become: yes
+  ansible.builtin.apt:
+    update_cache: yes
+
+- name: Install golang
+  become: yes
+  ansible.builtin.apt:
+    name: golang-go
+    state: latest

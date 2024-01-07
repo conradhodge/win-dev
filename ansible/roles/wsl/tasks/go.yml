@@ -15,3 +15,27 @@
   ansible.builtin.apt:
     name: golang-go
     state: latest
+
+- name: Add GOPATH in bashrc
+  lineinfile:
+    path: "$HOME/.bashrc"
+    line: 'export GOPATH=$HOME/go'
+    state: present
+
+- name: Update PATH with GOPATH in bashrc
+  lineinfile:
+    path: "$HOME/.bashrc"
+    line: 'export PATH="${GOPATH}/bin:${PATH}"'
+    state: present
+
+- name: Add GOPATH in zshrc
+  lineinfile:
+    path: "$HOME/.zshrc"
+    line: 'export GOPATH=$HOME/go'
+    state: present
+
+- name: Update PATH with GOPATH in zshrc
+  lineinfile:
+    path: "$HOME/.zshrc"
+    line: 'export PATH="${GOPATH}/bin:${PATH}"'
+    state: present

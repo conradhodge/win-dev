@@ -42,7 +42,7 @@ This will:
   - zip
   - [jq](https://stedolan.github.io/jq/)
   - [yq](https://mikefarah.gitbook.io/yq/)
-  - [Node.js](https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions)
+  - [Node.js LTS](https://nodejs.org/en)
   - [Go](https://golang.org/)
   - [Rush](https://rushjs.io/pages/intro/welcome/)
   - [pip and venv](https://docs.microsoft.com/en-us/windows/python/web-frameworks#install-python-pip-and-venv)

@@ -1,17 +1,16 @@
 ---
-- name: Download nodesource setup script
+# https://github.com/nodesource/distributions
+- name: Download nodesource setup script for Node.js LTS
   ansible.builtin.get_url:
-    url: https://deb.nodesource.com/nsolid_setup_deb.sh
-    dest: /tmp/nsolid_setup_deb.sh
+    url: https://deb.nodesource.com/setup_lts.x
+    dest: /tmp/setup_lts.x
     mode: '0500'
 
 - name: Run nodesource setup script
   become: yes
-  ansible.builtin.shell: /tmp/nsolid_setup_deb.sh {{ node_version }}
-  args:
-    creates: /usr/share/keyrings/nodesource.gpg
+  ansible.builtin.shell: /tmp/setup_lts.x
 
-- name: Install Node.js {{ node_version }}
+- name: Install Node.js LTS
   become: yes
   ansible.builtin.apt:
     name: nodejs

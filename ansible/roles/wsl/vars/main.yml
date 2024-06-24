@@ -14,5 +14,3 @@ apt_packages:
 node_packages:
   - "@microsoft/rush"
   - aws-cdk
-
-liquibase_version: 4.27.0

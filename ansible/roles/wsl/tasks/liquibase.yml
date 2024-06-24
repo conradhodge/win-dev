@@ -1,21 +1,23 @@
 ---
-- name: Create directory for Liquibase installation
+# https://docs.liquibase.com/start/install/liquibase-linux-debian-ubuntu.html1
+- name: Add Liquibase apt repository using key from URL
   become: yes
-  ansible.builtin.file:
-    path: /usr/local/liquibase/{{ liquibase_version }}
-    state: directory
+  ansible.builtin.deb822_repository:
+    name: liquibase
+    types: deb
+    uris: https://repo.liquibase.com
+    suites: stable
+    components: main
+    architectures: amd64
+    signed_by: https://repo.liquibase.com/liquibase.asc
 
-- name: Download the Liquibase package
+- name: Update apt packages
   become: yes
-  ansible.builtin.unarchive:
-    src: https://github.com/liquibase/liquibase/releases/download/v{{ liquibase_version }}/liquibase-{{ liquibase_version }}.zip
-    dest: /usr/local/liquibase/{{ liquibase_version }}
-    remote_src: yes
-    creates: /usr/local/liquibase/{{ liquibase_version }}/liquibase
+  ansible.builtin.apt:
+    update_cache: yes
 
-- name: Create a symbolic link to Liquibase command
+- name: Install Liquibase CLI
   become: yes
-  ansible.builtin.file:
-    src: /usr/local/liquibase/{{ liquibase_version }}/liquibase
-    dest: /usr/local/bin/liquibase
-    state: link
+  ansible.builtin.apt:
+    name: liquibase
+    state: latest

@@ -55,7 +55,7 @@ This will:
   - [AWS CLI](https://aws.amazon.com/cli/)
   - [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html)
   - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/)
-  - [Liquibase CLI](https://www.liquibase.org/)
+  - [Liquibase CLI](https://docs.liquibase.com)
   - [cowsay](https://en.wikipedia.org/wiki/Cowsay) (very important)
 
 Follow these tutorials to configure the CLI tools.

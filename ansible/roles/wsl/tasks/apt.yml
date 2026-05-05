@@ -17,6 +17,12 @@
     name: liquibase
     state: absent
 
+- name: Remove GitHub CLI repository (disabled due to repo issues)
+  become: yes
+  ansible.builtin.deb822_repository:
+    name: github-cli
+    state: absent
+
 - name: Update and upgrade apt packages
   become: yes
   ansible.builtin.apt:

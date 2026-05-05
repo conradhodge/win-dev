@@ -1,4 +1,22 @@
 ---
+- name: Remove deprecated Ansible PPA
+  become: yes
+  ansible.builtin.apt_repository:
+    repo: ppa:ansible/ansible
+    state: absent
+
+- name: Remove deprecated Go PPA
+  become: yes
+  ansible.builtin.apt_repository:
+    repo: ppa:longsleep/golang-backports
+    state: absent
+
+- name: Remove existing Liquibase repository before apt upgrade
+  become: yes
+  ansible.builtin.deb822_repository:
+    name: liquibase
+    state: absent
+
 - name: Update and upgrade apt packages
   become: yes
   ansible.builtin.apt:

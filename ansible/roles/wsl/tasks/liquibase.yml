@@ -1,6 +1,13 @@
 ---
-# https://docs.liquibase.com/start/install/liquibase-linux-debian-ubuntu.html1
-- name: Add Liquibase apt repository using key from URL
+# https://docs.liquibase.com/start/install/liquibase-linux-debian-ubuntu.html
+- name: Download Liquibase apt signing key
+  become: yes
+  ansible.builtin.get_url:
+    url: https://repo.liquibase.com/liquibase.asc
+    dest: /usr/share/keyrings/liquibase.asc
+    mode: '0644'
+
+- name: Add Liquibase apt repository
   become: yes
   ansible.builtin.deb822_repository:
     name: liquibase
@@ -9,7 +16,7 @@
     suites: stable
     components: main
     architectures: amd64
-    signed_by: https://repo.liquibase.com/liquibase.asc
+    signed_by: /usr/share/keyrings/liquibase.asc
 
 - name: Update apt packages
   become: yes
@@ -20,4 +27,4 @@
   become: yes
   ansible.builtin.apt:
     name: liquibase
-    state: latest
+    state: present

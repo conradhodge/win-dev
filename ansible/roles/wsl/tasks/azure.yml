@@ -1,4 +1,5 @@
 ---
 # https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt#install-azure-cli
 - name: Install the Azure CLI
-  ansible.builtin.shell: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+  become: yes
+  ansible.builtin.shell: curl -sL https://aka.ms/InstallAzureCLIDeb | bash

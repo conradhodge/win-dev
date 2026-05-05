@@ -1,41 +1,19 @@
 ---
-# https://go.dev/wiki/Ubuntu
-- name: Add PPA repository for golang
-  become: yes
-  apt_repository:
-    repo: ppa:longsleep/golang-backports
-
-- name: Update apt packages
-  become: yes
-  ansible.builtin.apt:
-    update_cache: yes
-
+# Install the Ubuntu-packaged Go toolchain.
 - name: Install golang
   become: yes
   ansible.builtin.apt:
     name: golang-go
-    state: latest
-
-- name: Add GOPATH in bashrc
-  lineinfile:
-    path: "$HOME/.bashrc"
-    line: 'export GOPATH=$HOME/go'
     state: present
 
-- name: Update PATH with GOPATH in bashrc
+- name: Add Go bin directory to PATH in bashrc
   lineinfile:
-    path: "$HOME/.bashrc"
-    line: 'export PATH="${GOPATH}/bin:${PATH}"'
+    path: "{{ ansible_env.HOME }}/.bashrc"
+    line: 'export PATH="$HOME/go/bin:$PATH"'
     state: present
 
-- name: Add GOPATH in zshrc
+- name: Add Go bin directory to PATH in zshrc
   lineinfile:
-    path: "$HOME/.zshrc"
-    line: 'export GOPATH=$HOME/go'
-    state: present
-
-- name: Update PATH with GOPATH in zshrc
-  lineinfile:
-    path: "$HOME/.zshrc"
-    line: 'export PATH="${GOPATH}/bin:${PATH}"'
+    path: "{{ ansible_env.HOME }}/.zshrc"
+    line: 'export PATH="$HOME/go/bin:$PATH"'
     state: present

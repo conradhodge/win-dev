@@ -50,13 +50,21 @@ This will:
   - [tmpreaper](https://manpages.ubuntu.com/manpages/focal/man8/tmpreaper.8.html)
   - [Java Runtime Environment from OpenJDK](https://ubuntu.com/tutorials/install-jre#1-overview)
   - [QDirStat](https://github.com/shundhammer/qdirstat)
-  - [GitHub CLI](https://cli.github.com/)
   - [AWS CDK CLI](https://github.com/aws/aws-cdk)
   - [AWS CLI](https://aws.amazon.com/cli/)
   - [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html)
   - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/)
   - [Liquibase CLI](https://docs.liquibase.com)
   - [cowsay](https://en.wikipedia.org/wiki/Cowsay) (very important)
+
+**Note:** [GitHub CLI](https://cli.github.com/) is currently disabled in provisioning because the upstream repository does not provide Release files for Ubuntu 24.04 (noble). You can install it manually with:
+
+```bash
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg && \
+sudo apt update && sudo apt install gh
+```
+
+Once the repository supports noble, you can re-enable it by uncommenting `gh.yml` in `ansible/roles/wsl/tasks/main.yml`.
 
 Follow these tutorials to configure the CLI tools.
 

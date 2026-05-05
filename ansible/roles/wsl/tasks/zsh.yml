@@ -2,30 +2,30 @@
 - name: Install oh-my-zsh
   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   args:
-    creates: $HOME/.oh-my-zsh
+    creates: "{{ ansible_env.HOME }}/.oh-my-zsh"
 
 - name: "Configure the zsh theme"
   replace:
-    path: $HOME/.zshrc
+    path: "{{ ansible_env.HOME }}/.zshrc"
     regexp: '^ZSH_THEME=".+"'
     replace: 'ZSH_THEME="conradhodge"'
 
 - name: "Configure the zsh plugins"
   replace:
-    path: $HOME/.zshrc
+    path: "{{ ansible_env.HOME }}/.zshrc"
     regexp: '^plugins=\(.+\)'
     replace: 'plugins=(docker gh git golang npm)'
 
 - name: "Configure zsh to disable auto title"
   replace:
-    path: $HOME/.zshrc
+    path: "{{ ansible_env.HOME }}/.zshrc"
     regexp: '^# +DISABLE_AUTO_TITLE="true"'
     replace: 'DISABLE_AUTO_TITLE="true"'
 
 - name: Copy zsh theme over
   copy:
     src: conradhodge.zsh-theme
-    dest: ~/.oh-my-zsh/custom/themes
+    dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/themes"
     mode: 0644
     force: yes
 
